@@ -11,14 +11,14 @@
 	    crossorigin="anonymous">
 
 	<link rel="stylesheet" href="css/style.css">
-
+	<script type="text/javascrpit" src="js/main.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 	    crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 	    crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
-		<script type="text/scrpit" href="js/main.js"></script>
+	    crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -28,7 +28,7 @@
 			<div class="row">
 				<div class="col-md-9 offset-md-1 ">
 					<nav class="navbar navbar-expand-lg ">
-						<a class="navbar-brand" href="#">Home</a>
+						<a class="navbar-brand" href="index.html">Home</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						    aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
@@ -36,6 +36,32 @@
 
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav mr-auto">
+
+								<!-- Button trigger modal -->
+								<a href="cadastro.html">
+								<button type="button" class="btn navitembg" data-toggle="modal" data-target="#exampleModalCenter">
+									Cadastro
+								</button>
+							</a>
+
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<a href="cadastro.html">
+													<h5 id="cadastro">Cadastre-se</h5>
+												</a>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+
+
 								<!-- Button trigger modal -->
 								<button type="button" class="btn navitembg" data-toggle="modal" data-target="#exampleModal">
 									Login
@@ -56,7 +82,7 @@
 													<div class="form-group">
 														<label for="exampleInputEmail1">Email</label>
 														<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-														<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+														
 													</div>
 													<div class="form-group">
 														<label for="exampleInputPassword1">Password</label>
@@ -67,6 +93,9 @@
 														<label class="form-check-label" for="exampleCheck1">Lembrar</label>
 													</div>
 													<button type="submit" class="btn btn-primary float-right login-btn">Entrar</button>
+													<a target="_blank" href="cadastro.html">
+														<button type="submit" class="btn btn-primary float-left cadastrar-btn">Cadastrar</button>
+													</a>
 												</form>
 											</div>
 										</div>
@@ -81,7 +110,7 @@
 										<a class="dropdown-item" href="#">Eletro</a>
 										<a class="dropdown-item" href="#">Smartphones</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">LAIRES HOMAO DA PORRA!! TONY</a>
+										<a class="dropdown-item" href="#">BUNITO</a>
 									</div>
 								</li>
 

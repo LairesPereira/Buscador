@@ -16,6 +16,10 @@ img-logo {
 	width: 200px;;
 }
 
+.form-check-label, .form-check-input {
+	margin-bottom: 20px; 
+}
+
 .btn-color {
 	background-color: rgba(0, 0, 0, 0);
 	color: black;
