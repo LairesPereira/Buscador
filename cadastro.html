@@ -2,91 +2,159 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cadastro</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cadastro.css">
-    <script type="text/javascrpit" src="js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/cadastro.css">
+	<script type="text/javascrpit" src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#meuform').validate({
+				rules: {
+					Email: {
+						required: true,
+						email: true
+					},
+					password: {
+						required: true,
+						minlength: 4
+					},
+					confirm_password: {
+						required: true,
+						equalTo: "#password"
+					},
+					Nome: {
+						required: true,
+						minlength: 5
+					},
+					CPF: {
+						
+					},
+					Nascimento: {
+						
+					},
+					Numero: {
+						
+					},
+					RG: {
+						
+					},
+					Rua: {
+						
+					},
+					Bairro: {
+						
+					},
+					CEP: {
+						
+					},
+					Estado: {
+						
+					},
+					Cidade: {
+						
+					},
+					Contrato: {
+						required: true
+					}
+				},
+				messages: {
+					
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
 
-    <div class="container-fluid">
-        <div class="col-md-6 offset-md-3">
-            <center>
-                <h1>Faça seu cadastro.</h1>
-            </center>
-            <form>
-                <div class="form-group">
-                    <label>Email address</label>
-                    <input type="email" class="form-control" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Nome</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nome">
-                </div>
-                <div class="form-group">
-                    <label>CPF</label>
-                    <input type="number" class="form-control" placeholder="CPF">
-                </div>
-                <div class="form-group">
-                    <label>Nascimento</label>
-                    <input type="text" class="form-control" placeholder="xx/xx/xx">
-                </div>
-                <div class="form-group">
-                    <label>Telefone</label>
-                    <input type="number" class="form-control" placeholder="(99) 99999-9999">
-                </div>
-                <label>Sexo</label>
-                <select class="form-control">
-                    <option>Masculino</option>
-                    <option>Feminino</option>
-                </select>
-                <div class="form-group">
-                    <label>RG</label>
-                    <input type="text" class="form-control" placeholder="99-999-999-9">
-                </div>
-                <div class="form-group">
-                    <label>Rua</label>
-                    <input type="text" class="form-control" placeholder="Rua">
-                </div>
-                <div class="form-group">
-                    <label>Bairro</label>
-                    <input type="text" class="form-control" placeholder="Bairro">
-                </div>
-                <div class="form-group">
-                    <label>CEP</label>
-                    <input type="text" class="form-control" placeholder="99999-999">
-                </div>
-                <label>Estado</label>
-                <select class="form-control">
-                    <option>Paraiba</option>
-                    <option>São Paulo</option>
-                </select>
-                <br>
-                <label>Cidade</label>
-                <select class="form-control">
-                    <option>Carrazera</option>
-                    <option>Heliópolis</option>
-                </select>
-
-                <br>
-                <button class="btn btn-primary">Cadastrar</button>
-            </form>
-        </div>
-    </div>
+	<div class="container-fluid">
+		<div class="col-md-6 offset-md-3">
+			<center>
+				<h1>Faça seu cadastro.</h1>
+			</center>
+			<form id="meuform">
+				<div class="form-group">
+					<label>Email address</label>
+					<input type="email" class="form-control" placeholder="Enter email" name="Email">
+				</div>
+				<div class="form-group">
+					<label>Senha</label>
+					<input type="password" class="form-control" placeholder="Coloque a senha" name="password" id="password">
+				</div>
+				<div class="form-group">
+					<label>Repita a senha</label>
+					<input type="password" class="form-control" placeholder="repita a senha" name="confirm_password" id="confirm_password">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Nome</label>
+					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nome" name="Nome">
+				</div>
+				<div class="form-group">
+					<label>CPF</label>
+					<input type="number" class="form-control" placeholder="CPF" name="CPF">
+				</div>
+				<div class="form-group">
+					<label>Nascimento</label>
+					<input type="text" class="form-control" placeholder="xx/xx/xx" name="Nascimento">
+				</div>
+				<div class="form-group">
+					<label>Telefone</label>
+					<input type="number" class="form-control" placeholder="(99) 99999-9999" name="Numero">
+				</div>
+				<label>Sexo</label>
+				<select class="form-control">
+					<option>Masculino</option>
+					<option>Feminino</option>
+				</select>
+				<div class="form-group">
+					<label>RG</label>
+					<input type="text" class="form-control" placeholder="99-999-999-9" name="RG">
+				</div>
+				<div class="form-group">
+					<label>Rua</label>
+					<input type="text" class="form-control" placeholder="Rua" name="Rua">
+				</div>
+				<div class="form-group">
+					<label>Bairro</label>
+					<input type="text" class="form-control" placeholder="Bairro" name="Bairro">
+				</div>
+				<div class="form-group">
+					<label>CEP</label>
+					<input type="text" class="form-control" placeholder="99999-999" name="CEP">
+				</div>
+				<label>Estado</label>
+				<select class="form-control">
+					<option>Paraiba</option>
+					<option>São Paulo</option>
+				</select>
+				<br>
+				<label>Cidade</label>
+				<select class="form-control">
+					<option>Carrazera</option>
+					<option>Heliópolis</option>
+				</select>
+				<br>
+				Aceito os termos e condições do site <input type="checkbox" name="Contrato">
+				<br>
+				<br>
+				<button class="btn btn-primary">Cadastrar</button>
+				<br>
+			</form>
+		</div>
+	</div>
 </body>
 
 </html>
