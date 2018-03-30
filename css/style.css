@@ -7,31 +7,18 @@ header {
 	padding-top: 25px;
 	padding-bottom: 15px;
 	background-color: #FFCD00;
-	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);*/
 }
 
-img-logo {
-	float: left;
-}
-.form {
-	width: 200px;;
+.form-check-label,
+.form-check-input {
+	margin-bottom: 20px;
 }
 
-.form-check-label, .form-check-input {
-	margin-bottom: 20px; 
-}
-
-.btn-color {
-	background-color: rgba(0, 0, 0, 0);
-	color: black;
-	border-width: 0;
-}
-
-.nav-header {
-	margin-top: 50px;
-}
-
-.navitembg{
+.navitembg {
 	color: blue;
 	background-color: #FFCD00;
+}
+
+.container-products {
+	margin-top: 20px;	
 }
