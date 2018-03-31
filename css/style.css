@@ -9,6 +9,10 @@ header {
 	background-color: #FFCD00;
 }
 
+.obrigatorio{
+	color: red;
+}
+
 .form-check-label,
 .form-check-input {
 	margin-bottom: 20px;
