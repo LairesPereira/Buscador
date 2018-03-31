@@ -22,3 +22,11 @@ header {
 .container-products {
 	margin-top: 20px;	
 }
+
+.anunciar {
+	display: none;
+}
+
+.modal-hide {
+	
+}
