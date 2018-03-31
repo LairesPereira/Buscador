@@ -10,6 +10,67 @@ $(document).ready(function(){
     }
 })
 
+<<<<<<< HEAD
 
 
 
+=======
+function verificaLogin(){
+    
+}
+$(document).ready(function() {
+	$('#meuform').validate({
+		rules: {
+			Email: {
+				required: true,
+				email: true
+			},
+			password: {
+				required: true,
+				minlength: 4
+			},
+			confirm_password: {
+				required: true,
+				equalTo: "#password"
+			},
+			Nome: {
+				required: true,
+				minlength: 5
+			},
+			CPF: {
+				
+			},
+			Nascimento: {
+				
+			},
+			Numero: {
+				
+			},
+			RG: {
+				
+			},
+			Rua: {
+				
+			},
+			Bairro: {
+				
+			},
+			CEP: {
+				
+			},
+			Estado: {
+				
+			},
+			Cidade: {
+				
+			},
+			Contrato: {
+				required: true
+			}
+		},
+		messages: {
+			
+		}
+	});
+});
+>>>>>>> d3a12f70af5f5b98e12ecdc7bb6a7750f2a2d605
