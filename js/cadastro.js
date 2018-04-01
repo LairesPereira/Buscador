@@ -27,14 +27,39 @@ var bairro = /^[a-zA-Z0-9]{4,30}$/;
 var cep = /^[0-9]{5,5}\-[0-9]{3,3}$/;
 //A expressão regular para o CEP valida apenas os campos no formato: "99999-999";
 
-function PreviewImage() { 
-        var oFReader = new FileReader(); 
-        oFReader.readAsDataURL($("#Image").files[0]);
+$(document).on('change', '.btn-file :file', function() {
+		var input = $(this),
+			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+		input.trigger('fileselect', [label]);
+		});
 
-        oFReader.onload = function (oFREvent) { 
-            $("#uploadPreview").src = oFREvent.target.result; 
-        }; 
-    };
+		$('.btn-file :file').on('fileselect', function(event, label) {
+		    
+		    var input = $(this).parents('.input-group').find(':text'),
+		        log = label;
+		    
+		    if( input.length ) {
+		        input.val(log);
+		    } else {
+		        if( log );
+		    }
+	    
+		});
+		function readURL(input) {
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+		        
+		        reader.onload = function (e) {
+		            $('#img-upload').attr('src', e.target.result);
+		        }
+		        
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+
+		$("#imgInp").change(function(){
+		    readURL(this);
+		});
 //Função da pre visualização da imagem
 
 /*----------Funções de atualização dinâmica dos campos----------*/

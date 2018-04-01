@@ -28,9 +28,23 @@
 				<h1>Faça seu cadastro.</h1>
 			</center>
 			<form id="meuform">
-				<center><img id="uploadPreview" style="width: 100px; height: 100px;" /> <br/>
-				<label>Foto do Cadastro</label><span class="obrigatorio">*</span>
-				<br/><input id="Image" type="file" name="myPhoto" onchange="PreviewImage();" /></center><br/><br/>
+				<center><div class="container">
+				<div class="col-md-6">
+   					 <div class="form-group">	 
+        				
+        			<img id='img-upload' style="width: 100px; height: 100px;" />
+        			<div class="input-group">
+           					 <span class="input-group-btn">
+               					 <span class="btn btn-default btn-file">
+                 					 <input class="custom-file-input" type="file" id="imgInp">
+                 					 <label class="custom-file-label" for="imgInp"></label>
+                				</span>
+            				</span>
+        			</div>
+        			<label>Foto de Cadastro</label>
+    				</div>
+    				</div>
+				</div></center>
 				<div class="form-group">
 					<label>Endereço de Email</label><span class="obrigatorio"> *</span>
 					<input type="email" class="form-control" placeholder="Enter email" name="Email" id="email">
