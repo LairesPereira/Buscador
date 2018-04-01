@@ -49,15 +49,15 @@
 				</div>
 				<div class="form-group">
 					<label>CPF</label><span class="obrigatorio"> *</span>
-					<input type="text" class="form-control" placeholder="CPF" id="CPF" name="CPF" onkeyup="corrigirCpf()" maxlength=14>
+					<input type="text" class="form-control" placeholder="CPF" id="CPF" name="CPF" onkeyup="corrigirCpf()" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" maxlength=14>
 				</div>
 				<div class="form-group">
 					<label>Data de Nascimento</label><span class="obrigatorio"> *</span>
-					<input type="text" class="form-control" placeholder="xx/xx/xx" id="data" name="Nascimento" onkeyup="corrigirData()" maxlength=10>
+					<input type="text" class="form-control" placeholder="xx/xx/xx" id="data" name="Nascimento" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirData()" maxlength=10>
 				</div>
 				<div class="form-group">
 					<label>Telefone</label><span class="obrigatorio"> *</span>
-					<input type="text" class="form-control" placeholder="(99) 99999-9999"  id="telefone" name="Numero" onkeyup="corrigirTelefone()" maxlength=15>
+					<input type="text" class="form-control" placeholder="(99) 99999-9999"  id="telefone" name="Numero" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirTelefone()" maxlength=15>
 				</div>
 				<label>Sexo</label>
 				<select class="form-control">
@@ -78,7 +78,7 @@
 				</div>
 				<div class="form-group">
 					<label>CEP</label><span class="obrigatorio"> *</span>
-					<input type="text" class="form-control" placeholder="99999-999" id="CEP" name="CEP" onkeyup="corrigirCep()" maxlength=9>
+					<input type="text" class="form-control" placeholder="99999-999" id="CEP" name="CEP" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirCep()" maxlength=9>
 				</div>
 				<label>Estado</label>
 				<select class="form-control">

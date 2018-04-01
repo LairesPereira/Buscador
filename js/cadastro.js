@@ -10,7 +10,7 @@ var email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`~-]+@[a-z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z
 //ela funciona em dois escopos, tudo que tem antes e tudo que tem depois do '@';
 //é necessário ter pelo menos 1 caracetere do lado esquero do '@'
 //já do lado direito, ele vai validar dois tipos de expressão; do tipo "exemplo.com" e "exemplo.com.br". sendo opcional a string apartir do segundo ponto;
-var phone = /\([0-9.]{2,2}\) [0-9.]{5,5}\-[0-9.]{4,4}/;
+var phone = /^\([0-9.]{2,2}\) [0-9.]{5,5}\-[0-9.]{4,4}$/;
 //A expressão regular para Numero de telefone valida apenas os campos no formato: "(99) 99999-9999";
 var nome = /^[a-zA-Z ]{2,45}$/;
 //A expressão regular para nome valida nomes de 2 até 45 caracteres (sujeito a mudança);
