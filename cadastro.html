@@ -28,9 +28,23 @@
 				<h1>Faça seu cadastro.</h1>
 			</center>
 			<form id="meuform">
-				<center><img id="uploadPreview" style="width: 100px; height: 100px;" /> <br/>
-				<label>Foto do Cadastro</label><span class="obrigatorio">*</span>
-				<br/><input id="Image" type="file" name="myPhoto" onchange="PreviewImage();" /></center><br/><br/>
+				<center><div class="container">
+				<div class="col-md-6">
+   					 <div class="form-group">	 
+        				
+        			<img id='img-upload' style="width: 100px; height: 100px;" />
+        			<div class="input-group">
+           					 <span class="input-group-btn">
+               					 <span class="btn btn-default btn-file">
+                 					 <input class="custom-file-input" type="file" id="imgInp">
+                 					 <label class="custom-file-label" for="imgInp"></label>
+                				</span>
+            				</span>
+        			</div>
+        			<label>Foto de Cadastro</label>
+    				</div>
+    				</div>
+				</div></center>
 				<div class="form-group">
 					<label>Endereço de Email</label><span class="obrigatorio"> *</span>
 					<input type="email" class="form-control" placeholder="Enter email" name="Email" id="email">
@@ -49,15 +63,15 @@
 				</div>
 				<div class="form-group">
 					<label>CPF</label><span class="obrigatorio"> *</span>
-					<input type="text" class="form-control" placeholder="CPF" id="CPF" name="CPF" onkeyup="corrigirCpf()" maxlength=14>
+					<input type="text" class="form-control" placeholder="CPF" id="CPF" name="CPF" onkeyup="corrigirCpf()" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" maxlength=14>
 				</div>
 				<div class="form-group">
 					<label>Data de Nascimento</label><span class="obrigatorio"> *</span>
-					<input type="text" class="form-control" placeholder="xx/xx/xx" id="data" name="Nascimento" onkeyup="corrigirData()" maxlength=10>
+					<input type="text" class="form-control" placeholder="xx/xx/xx" id="data" name="Nascimento" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirData()" maxlength=10>
 				</div>
 				<div class="form-group">
 					<label>Telefone</label><span class="obrigatorio"> *</span>
-					<input type="text" class="form-control" placeholder="(99) 99999-9999"  id="telefone" name="Numero" onkeyup="corrigirTelefone()" maxlength=15>
+					<input type="text" class="form-control" placeholder="(99) 99999-9999"  id="telefone" name="Numero" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirTelefone()" maxlength=15>
 				</div>
 				<label>Sexo</label>
 				<select class="form-control">
@@ -78,7 +92,7 @@
 				</div>
 				<div class="form-group">
 					<label>CEP</label><span class="obrigatorio"> *</span>
-					<input type="text" class="form-control" placeholder="99999-999" id="CEP" name="CEP" onkeyup="corrigirCep()" maxlength=9>
+					<input type="text" class="form-control" placeholder="99999-999" id="CEP" name="CEP" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirCep()" maxlength=9>
 				</div>
 				<label>Estado</label>
 				<select class="form-control">
