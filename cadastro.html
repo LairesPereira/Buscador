@@ -28,8 +28,11 @@
 				<h1>Faça seu cadastro.</h1>
 			</center>
 			<form id="meuform">
+				<center><img id="uploadPreview" style="width: 100px; height: 100px;" /> <br/>
+				<label>Foto do Cadastro</label><span class="obrigatorio">*</span>
+				<br/><input id="Image" type="file" name="myPhoto" onchange="PreviewImage();" /></center><br/><br/>
 				<div class="form-group">
-					<label>Email address</label><span class="obrigatorio"> *</span>
+					<label>Endereço de Email</label><span class="obrigatorio"> *</span>
 					<input type="email" class="form-control" placeholder="Enter email" name="Email" id="email">
 				</div>
 				<div class="form-group">
@@ -49,7 +52,7 @@
 					<input type="text" class="form-control" placeholder="CPF" id="CPF" name="CPF" onkeyup="corrigirCpf()" maxlength=14>
 				</div>
 				<div class="form-group">
-					<label>Nascimento</label><span class="obrigatorio"> *</span>
+					<label>Data de Nascimento</label><span class="obrigatorio"> *</span>
 					<input type="text" class="form-control" placeholder="xx/xx/xx" id="data" name="Nascimento" onkeyup="corrigirData()" maxlength=10>
 				</div>
 				<div class="form-group">

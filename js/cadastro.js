@@ -27,6 +27,16 @@ var bairro = /^[a-zA-Z0-9]{4,30}$/;
 var cep = /^[0-9]{5,5}\-[0-9]{3,3}$/;
 //A expressão regular para o CEP valida apenas os campos no formato: "99999-999";
 
+function PreviewImage() { 
+        var oFReader = new FileReader(); 
+        oFReader.readAsDataURL(document.getElementById("Image").files[0]);
+
+        oFReader.onload = function (oFREvent) { 
+            document.getElementById("uploadPreview").src = oFREvent.target.result; 
+        }; 
+    };
+//Função da pre visualização da imagem
+
 /*----------Funções de atualização dinâmica dos campos----------*/
 
 //Esta função vai cuidar da atualização dinâmica do campo de CPF, para que o usuário digite apenas os números;
@@ -133,6 +143,8 @@ function validarCampos(){
 		alert("usuário cadastrado com sucesso!");
 	}
 }
+
+
 //Falta ainda a validação do RG e a implementação desta função no botão do formulário;
 //Esta função está sendo ativada por meio de gambiarra no botão localizado no canto inferior esquedo da pagina, para que se possa testar tudo;
 //Um grande abraço e um beijo pra vcs, meus lindos <3;
