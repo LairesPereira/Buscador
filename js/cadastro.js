@@ -29,10 +29,10 @@ var cep = /^[0-9]{5,5}\-[0-9]{3,3}$/;
 
 function PreviewImage() { 
         var oFReader = new FileReader(); 
-        oFReader.readAsDataURL(document.getElementById("Image").files[0]);
+        oFReader.readAsDataURL($("#Image").files[0]);
 
         oFReader.onload = function (oFREvent) { 
-            document.getElementById("uploadPreview").src = oFREvent.target.result; 
+            $("#uploadPreview").src = oFREvent.target.result; 
         }; 
     };
 //Função da pre visualização da imagem
@@ -43,41 +43,41 @@ function PreviewImage() {
 // 999.999.999-99
 //    4   8   12  (índices de atualização);
 function corrigirCpf(){
-	var tamanho = document.getElementById("CPF").value.length
+	var tamanho = $("CPF").value.length
 	if((tamanho==3)||(tamanho==7)){
-		document.getElementById("CPF").value += ".";
+		$("#CPF").value += ".";
 	}
-	if(tamanho==11) document.getElementById("CPF").value += "-";
+	if(tamanho==11) $("#CPF").value += "-";
 }
 //Esta função vai cuidar da atualização dinâmica do campo de Data de Nascimento, para que o usuário digite apenas os números;
 // 99/99/9999
 //   3  6     (índices de atualização);
 function corrigirData(){
-	var tamanho = document.getElementById("data").value.length;
+	var tamanho = $("#data").value.length;
 	if((tamanho==2)||(tamanho==5)){
-		document.getElementById("data").value += "/";
+		$("#data").value += "/";
 	}
 }
 //Esta função vai cuidar da atualização dinâmica do campo de Número de telefone, para que o usuário digite apenas os números;
 // (99) 99999-9999
 // 1  4      11    (índices de atualização);
 function corrigirTelefone(){
-	var texto = document.getElementById("telefone").value;
+	var texto = $("#telefone").value;
 	var tamanho = texto.length;
 	if(tamanho==2){
-		document.getElementById("telefone").value = "("+texto+") ";
+		$("#telefone").value = "("+texto+") ";
 	}
 	if(tamanho==10){
-		document.getElementById("telefone").value += "-";
+		$("#telefone").value += "-";
 	}
 }
 //Esta função vai cuidar da atualização dinâmica do campo de CEP, para que o usuário digite apenas os números;
 // 99999-999
 //      6    (índices de atualização);
 function corrigirCep(){
-	var tamanho = document.getElementById("CEP").value.length;
+	var tamanho = $("#CEP").value.length;
 	if(tamanho==5){
-		document.getElementById("CEP").value += "-";
+		$("#CEP").value += "-";
 	}
 }
                                   /*-------------INCOMPLETA----------*/
@@ -86,10 +86,10 @@ function corrigirCep(){
 //Se algum dos campos estiver fora do padrão, ele será destacado de vermelho para que o usuário possa concertar;
 function validarCampos(){
 	var validado = true; //esta variável dará a palavra final sobre a validação de todos os campos;
-	var userPassword = document.getElementById("password").value;
-	var confirmUserPassword = document.getElementById("confirm_password").value;
+	var userPassword = $("#password").value;
+	var confirmUserPassword = $("#confirm_password").value;
 	//testa a validação do email;
-	if(!email.test(document.getElementById("email").value)){
+	if(!email.test($("#email").value)){
 		$("#email").css("border-color","red");
 		validado = false;
 	}
@@ -104,37 +104,37 @@ function validarCampos(){
 		validado = false;
 	}
 	//testa a validação do nome;
-	if(!nome.test(document.getElementById("Nome").value)){
+	if(!nome.test($("Nome").value)){
 		$("#Nome").css("border-color","red");
 		validado = false;
 	}
 	//testa a validação do CPF;
-	if(!cpf.test(document.getElementById("CPF").value)){
+	if(!cpf.test($("CPF").value)){
 		$("#CPF").css("border-color","red");
 		validado = false;
 	}
 	//testa a validação da Data de Nascimento;
-	if(!data.test( document.getElementById("data").value)){
+	if(!data.test( $("data").value)){
 		$("#data").css("border-color","red");
 		validado = false;
 	}
 	//testa a validação do Número de telefone;
-	if(!phone.test(document.getElementById("telefone").value)){
+	if(!phone.test($("telefone").value)){
 		$("#telefone").css("border-color","red");
 		validado = false;
 	}
 	//testa a validação da Rua;
-	if(!rua.test(document.getElementById("Rua").value)){
+	if(!rua.test($("Rua").value)){
 		$("#Rua").css("border-color","red");
 		validado = false;
 	}
 	//testa a validação do Bairro;
-	if(!bairro.test(document.getElementById("Bairro").value)){
+	if(!bairro.test($("Bairro").value)){
 		$("#Bairro").css("border-color","red");
 		validado = false;
 	}
 	//testa a validação do CEP;
-	if(!cep.test(document.getElementById("CEP").value)){
+	if(!cep.test($("CEP").value)){
 		$("#CEP").css("border-color","red");
 		validado = false;
 	}
