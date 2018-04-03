@@ -2,10 +2,11 @@
 <html>
 
 <head>
+	<link rel="shortcut icon" type="image/x-icon" href="https://lh3.googleusercontent.com/TiJ5SWfcajksT4SYaRMH5HjWETJntnAEP6DmmQ4n5sXYxs9suU3kkiVIq5S7mcayHti7=w300" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<title>Projeto</title>
+	<title>Buscapé - Compare Preços e Economize</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	    crossorigin="anonymous">
@@ -15,8 +16,11 @@
 	    crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	    crossorigin="anonymous"></script>
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/perfilproduto.js"></script>
 
 </head>
 
@@ -26,6 +30,7 @@
 			<div class="row">
 				<div class="col-md-9 offset-md-1 ">
 					<nav class="navbar navbar-expand-lg ">
+						<img src="https://logodownload.org/wp-content/uploads/2017/11/buscape-logo.png" class="float-left" width="110px" height="60px"> 
 						<a class="navbar-brand" href="index.html">Home</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						    aria-expanded="false" aria-label="Toggle navigation">
@@ -79,7 +84,7 @@
 												<form>
 													<div class="form-group">
 														<label for="exampleInputEmail1">Email</label>
-														<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+														<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"  placeholder="Enter email">
 
 													</div>
 													<div class="form-group">
@@ -102,28 +107,31 @@
 									    aria-expanded="false">
 										Mais...
 									</a>
-									<div class="dropdown-menu more-options" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item eletro" href="#">Eletro</a>
-										<a class="dropdown-item smartphone" href="#">Smartphones</a>
-										<a class="btn dropdown-item anunciar" data-toggle="modal" data-target="#modal-produtos">
-											Anunciar
-										</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="categoria/cameras.html">Câmeras e Filmadoras</a>
+										<a class="dropdown-item" href="categoria/celular.html">Smartphones</a>	
+										<a class="dropdown-item" href="produtoinexistente.html">Casa e Banho</a>
+										<a class="dropdown-item" href="categoria/filmes.html">DVD e CD</a>
+										<a class="dropdown-item" href="produtoinexistente.html">Viagens</a>
+										<a class="dropdown-item" href="categoria/beleza.html">Saúde e Beleza</a>
+
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item">BUNITO</a>
+										<a class="dropdown-item" href="#">Mais Categorias</a>
 									</div>
 								</li>
 
 
 							</ul>
 							<form class="form-inline my-2 my-lg-0">
-								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-								<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+								<input class="form-control mr-sm-2" type="search" placeholder="Buscar produtos..." aria-label="Search" id="oinput">
+								<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="">Buscar</button>
 							</form>
 						</div>
 					</nav>
 				</div>
 			</div>
 	</header>
+
 
 	<div id="modal-produtos" class="modal" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
@@ -179,35 +187,69 @@
 	<div class="container-products">
 		<div class="row">
 			<div class="col-md-4">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="https://img.ibxk.com.br/2012/12/materias/33810716244.jpg" alt="Card image cap">
+				<div class="card" style="width: 18rem;" id="product">
+					<img class="card-img-top" src="https://http2.mlstatic.com/cmera-sony-dsc-h300-20mp35xhd-preto-vitrine-D_NQ_NP_671760-MLB26260180231_102017-F.jpg"
+					    alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Produto</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
+						<h5 class="card-title">Câmera Sony Dsc H300</h5>
+						<p class="card-text">Preço : R$1.300,00</p>
+						<a href="paginaproduto.html" class="btn btn-primary">Comprar Agora</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="https://geekysextoys.com/wp-content/uploads/2016/11/Super-cock-silicone-dildo-1-1-247x247.jpg"
+				<div class="card" style="width: 18rem;" id="product">
+					<img class="card-img-top" src="https://www.extra-imagens.com.br/dvdsebluray/FilmeseSeriados/AcaoAventura/2527650/29740588/DVD-O-Senhor-Dos-Aneis-A-Trilogia-Versao-Estendida-The-Lord-of-the-Rings-12-Discos-2527650.jpg"
 					    alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Produto</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
+						<h5 class="card-title">Box de Filmes : Senhor dos Anéis</h5>
+						<p class="card-text">Preço : R$ 40,50</p>
+						<a href="paginaproduto2.html" class="btn btn-primary">Comprar Agora</a>
 					</div>
 				</div>
 
 			</div>
 			<div class="col-md-4">
-				<div class="card" style="width: 18rem;">
+				<div class="card" style="width: 18rem;" id="product">
 					<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTkGS8ryhWD8j1kps5JjOEjKANMAtMRPZX149VC1d1rxbFnDncmg"
 					    alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Produto</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
+						<h5 class="card-title">Máscara de Látex - Cabeça de Cavalo</h5>
+						<p class="card-text">Preço :  R$ 21,20 </p>
+						<a href="paginaproduto3.html" class="btn btn-primary">Comprar Agora</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card" style="width: 18rem;" id="product">
+					<img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0885/7932/products/LUMCD_2048x2048.png?v=1495569233"
+					    alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">The Lumineers - Cleopatra (CD)</h5>
+						<p class="card-text">Preço :  R$ 27,90 </p>
+						<a href="paginaproduto3.html" class="btn btn-primary">Comprar Agora</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card" style="width: 18rem;" id="product">
+					<img class="card-img-top" src="https://a-static.mlcdn.com.br/1500x1500/smartphone-motorola-moto-g5s-xt1792-platinum/compreiemeu/0010060122/a525e1b6631ddd8fd2741d0f751f914a.jpg"
+					    alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Smartphone Motorola Moto G5S XT1792 Platinum</h5>
+						<p class="card-text">Preço :  R$ 747,50 </p>
+						<a href="paginaproduto3.html" class="btn btn-primary">Comprar Agora</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card" style="width: 18rem;" id="product">
+					<img class="card-img-top" src="https://avon.vteximg.com.br/arquivos/ids/169582-1000-1000/maleta-para-maquiagem-avon-130-anos-avn3291-1.jpg?v=636398792124530000"
+					    alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Maleta de Maquiagem Avon 130</h5>
+						<p class="card-text">Preço :  R$ 189,90 </p>
+						<a href="paginaproduto3.html" class="btn btn-primary">Comprar Agora</a>
 					</div>
 				</div>
 			</div>
@@ -217,6 +259,7 @@
 	</div>
 
 
-</body>
-
-</html>
+<div id="rodape">Você está no Buscapé Brasil
+		<center>
+		<div id="conteudo">BUSCAPÉ COMPANY INFORMAÇÃO E TECNOLOGIA LTDA., com sede na cidade de Santana de Parnaíba, Estado de São Paulo, na Avenida Marte, 489, CEP 06541-005, inscrita no CNPJ/MF sob o nº 09.419.682/0001-46</center></div></div>
+</body></html>
