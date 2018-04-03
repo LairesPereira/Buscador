@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cadastro</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/cadastro.css">
+	<script type="text/javascrpit" src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="col-md-6 offset-md-3">
+			<center>
+				<h1>Faça seu cadastro.</h1>
+			</center>
+			<form id="meuform">
+				<center><div class="container">
+				<div class="col-md-6">
+   					 <div class="form-group">	 
+        				
+        			<img id='img-upload' style="width: 100px; height: 100px;" />
+        			<div class="input-group">
+           					 <span class="input-group-btn">
+               					 <span class="btn btn-default btn-file">
+                 					 <input class="custom-file-input" type="file" id="imgInp">
+                 					 <label class="custom-file-label" for="imgInp"></label>
+                				</span>
+            				</span>
+        			</div>
+        			<label>Foto de Cadastro</label>
+    				</div>
+    				</div>
+				</div></center>
+				<div class="form-group">
+					<label>Endereço de Email</label><span class="obrigatorio"> *</span>
+					<input type="email" class="form-control" placeholder="Enter email" name="Email" id="email">
+				</div>
+				<div class="form-group">
+					<label>Senha</label><span class="obrigatorio"> *</span>
+					<input type="password" class="form-control" placeholder="Coloque a senha" name="password" id="password" maxlength=30>
+				</div>
+				<div class="form-group">
+					<label>Repita a senha</label>
+					<input type="password" class="form-control" placeholder="repita a senha" name="confirm_password" id="confirm_password" maxlength=30>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Nome</label><span class="obrigatorio"> *</span>
+					<input type="text" class="form-control" id="Nome" placeholder="Nome" name="Nome" maxlength="45">
+				</div>
+				<div class="form-group">
+					<label>CPF</label><span class="obrigatorio"> *</span>
+					<input type="text" class="form-control" placeholder="CPF" id="CPF" name="CPF" onkeyup="corrigirCpf()" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" maxlength=14>
+				</div>
+				<div class="form-group">
+					<label>Data de Nascimento</label><span class="obrigatorio"> *</span>
+					<input type="text" class="form-control" placeholder="xx/xx/xx" id="data" name="Nascimento" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirData()" maxlength=10>
+				</div>
+				<div class="form-group">
+					<label>Telefone</label><span class="obrigatorio"> *</span>
+					<input type="text" class="form-control" placeholder="(99) 99999-9999"  id="telefone" name="Numero" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirTelefone()" maxlength=15>
+				</div>
+				<label>Sexo</label>
+				<select class="form-control">
+					<option>Masculino</option>
+					<option>Feminino</option>
+				</select>
+				<div class="form-group">
+					<label>RG</label><span class="obrigatorio"> *</span>
+					<input type="text" class="form-control" placeholder="99-999-999-9" id="RG" name="RG">
+				</div>
+				<div class="form-group">
+					<label>Rua</label><span class="obrigatorio"> *</span>
+					<input type="text" class="form-control" placeholder="Rua" id="Rua" name="Rua" maxlength=60>
+				</div>
+				<div class="form-group">
+					<label>Bairro</label><span class="obrigatorio"> *</span>
+					<input type="text" class="form-control" placeholder="Bairro" id="Bairro" name="Bairro" maxlength=30>
+				</div>
+				<div class="form-group">
+					<label>CEP</label><span class="obrigatorio"> *</span>
+					<input type="text" class="form-control" placeholder="99999-999" id="CEP" name="CEP" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirCep()" maxlength=9>
+				</div>
+				<label>Estado</label>
+				<select class="form-control">
+					<option>Paraiba</option>
+					<option>São Paulo</option>
+				</select>
+				<br>
+				<label>Cidade</label>
+				<select class="form-control">
+					<option>Carrazera</option>
+					<option>Heliópolis</option>
+				</select>
+				<br>
+				Aceito os termos e condições do site <input type="checkbox" id="Contrato" name="Contrato">
+				<br>
+				<br>
+				<button onclick="validarCampos()" class="btn btn-primary"  >Cadastrar</button>
+				<br>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/cadastro.js"></script>
+
+</body>
+
+</html>
