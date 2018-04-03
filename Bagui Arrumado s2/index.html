@@ -106,7 +106,7 @@
 	</header>
 	<!-- PARTE COM OS PRODUTOS -->
 	<div class="container-products">
-		<div class="row">
+		<div class="row row-products">
 			<div class="col-md-4">
 				<div class="card" style="width: 18rem;" id="product">
 					<img class="card-img-top" src="https://http2.mlstatic.com/cmera-sony-dsc-h300-20mp35xhd-preto-vitrine-D_NQ_NP_671760-MLB26260180231_102017-F.jpg"
@@ -217,27 +217,27 @@
 						<div class="form-group">
 							<label>Nome do produto</label>
 							<span class="obrigatorio">*</span>
-							<input type="name" name="nome" class="form-control" id="nomeProduto" placeholder="Nome do Produto" />
+							<input type="name" name="nome" class="form-control" id="nome-anuncio" placeholder="Nome do Produto" />
 						</div>
 						<div class="form-group">
 							<label>Descrição</label>
-							<textarea name="descrever" id="descricao" placeholder="Descreva o seu Produto" class="form-control" rows="10"></textarea>
+							<textarea name="descrever" id="descricao-anuncio" placeholder="Descreva o seu Produto" class="form-control" rows="10"></textarea>
 						</div>
 						<div class="form-group">
 							<label>Preço (R$)</label>
 							<span class="obrigatorio">*</span>
-							<input type="text" name="vpreco" id="preco" class="form-control" style="width: 200px" />
+							<input type="text" name="vpreco" id="valor-anuncio" class="form-control" style="width: 200px" />
 						</div>
 						<div class="form-group">
 							<label>Link do Produto</label>
 							<span class="obrigatorio">*</span>
-							<input type="link" name="Link" id="LinkProduto" class="form-control" />
+							<input type="link" name="Link" id="link-anuncio" class="form-control" />
 						</div>
 						Aceito os termos e condições do site
 						<input type="checkbox" id="Contrato" name="Contrato">
 						<br>
 						<br>
-						<button onclick="anunciarProd()" class="btn btn-primary">Anunciar</button>
+						<a onclick="anunciarProd()" class="btn btn-primary">Anunciar</a>
 
 					</form>
 				</div>

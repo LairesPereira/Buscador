@@ -8,7 +8,6 @@ $(document).ready(function () {
 })
 
 var produtosDaPagina = []
-var rowsNumber = 1
 
 function anunciarProd() {
 
@@ -17,32 +16,32 @@ function anunciarProd() {
         $('#descricao-anuncio').val() === '' ||
         $('#link-anuncio').val() === '' ||
         $('#tipo-anuncio').val()
-    ) { return }
+    ) {
+        alert('Preencha todos os campos.')
+    }
 
-        var novoProduto = new Object()
+
+
+    var novoProduto = new Object()
     novoProduto.nome = $('#nome-anuncio').val()
     novoProduto.valor = $('#valor-anuncio').val()
-    novoProduto.descricao = $('#descricao-anuncio').val()
+    if ($('#descricao-anuncio').val().length > 80) {
+        novoProduto.descricao = $('#descricao-anuncio').val().substring(0, 80) + '...'
+    } else {
+        novoProduto.descricao = $('#descricao-anuncio').val()
+    }
     novoProduto.link = $('#link-anuncio').val()
-    novoProduto.tipo = $('#tipo-anuncio').val()
     produtosDaPagina.unshift(novoProduto)
     console.log(produtosDaPagina[0])
-    exibeProd(produtosDaPagina[0])
-}
 
-function exibeProd(produtoObj) {
-    console.log($('.products-row-' + rowsNumber).children().length + 1)
-    if ($('.products-row-' + rowsNumber).children().length === 3) { //verifica quantos "filhos" a linha tem, se = 3, cria nova linha
-        rowsNumber++
-        $('products-grid').append("<div class='row products-row-" + rowsNumber + "'></div>>")
-        $('.products-row-' + rowsNumber).append('<div class="col-md-4">' + '<div class="card" style="width: 18rem;">' + '<img class="card-img-top" src="https://img.ibxk.com.br/2012/12/materias/33810716244.jpg" alt="Card image cap">' +
-            '<div class="card-body">' +
-            '<h4 class="card-title titulo">' + produtoObj.nome + '</h4>' +
-            '<p class="card-text descricao">' + produtoObj.descricao + '</p>' +
-            '<h5 class="preco">' + produtoObj.valor + '</h5>' +
-            '<a target="_blank" href="' + link + '" class="btn btn-primary">Comprar</a>' +
-            '</div>' +
-            '</div>' +
-            '</div>')
-    }
+    $('.row-products').prepend('<div class="col-md-4">' + '<div class="card" style="width: 18rem;">' + '<img class="card-img-top" src="https://img.ibxk.com.br/2012/12/materias/33810716244.jpg" alt="Card image cap">' +
+        '<div class="card-body">' +
+        '<h4 class="card-title titulo">' + novoProduto.nome + '</h4>' +
+        '<p type="textarea" class="card-text descricao">' + novoProduto.descricao + '</p>' +
+        '<h5 class="preco">' + novoProduto.valor + '</h5>' +
+        '<a target="_blank" href="' + novoProduto.link + '" class="btn btn-primary">Comprar</a>' +
+        '</div>' +
+        '</div>' +
+        '</div>')
+
 }
