@@ -11,6 +11,11 @@ header {
 	padding-bottom: 15px;
 	background-color: #FFC312;
 }
+
+.anunciar {
+	display: none;
+}
+
 .col-md-4{
 	margin-bottom: 20px;
 }
