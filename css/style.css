@@ -1,12 +1,12 @@
 body {
-	background-color: #EEEEEE;
+	background-color: #ced6e0;
 	font-family: 'Montserrat', sans-serif;
 }
 
 header {
 	padding-top: 25px;
 	padding-bottom: 15px;
-	background-color: #FFCD00;
+	background-color: #FFC312;
 }
 
 .obrigatorio{
@@ -20,7 +20,7 @@ header {
 
 .navitembg {
 	color: blue;
-	background-color: #FFCD00;
+	background-color: #FFC312;
 }
 
 .container-products {

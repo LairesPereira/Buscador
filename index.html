@@ -24,7 +24,7 @@
 	<header>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-9 offset-md-1 ">
+				<div class="col-md-10 offset-md-1 ">
 					<nav class="navbar navbar-expand-lg ">
 						<a class="navbar-brand" href="index.html">Home</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -141,16 +141,24 @@
 					<form>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Nome</label>
-							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+							<input type="text" class="form-control" id="nome-anuncio" aria-describedby="emailHelp">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputPassword1">Valor</label>
-							<input type="number" class="form-control" id="exampleInputPassword1">
+							<input type="number" class="form-control" id="valor-anuncio">
 						</div>
 						<div class="form-group">
-								<label for="exampleFormControlTextarea1">Descrição</label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-							  </div>
+							<label for="exampleFormControlTextarea1">Descrição</label>
+							<textarea class="form-control" id="descricao-anuncio" rows="3"></textarea>
+						</div>
+						<div class="form-group">
+							<label>tipo</label>
+							<input placeholder="Smarthpone, tv..." type="text" class="form-control" id="tipo-anuncio" rows="3"></input>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Link</label>
+							<input type="text" class="form-control" id="link-anuncio" aria-describedby="emailHelp">
+						</div>
 
 					</form>
 
@@ -168,8 +176,8 @@
 
 
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button onclick="anunciarProd()" type="button" class="btn btn-primary">Anunciar</button>
+					<button  type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -177,37 +185,43 @@
 
 	<!-- PARTE COM OS PRODUTOS -->
 	<div class="container-products">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="https://img.ibxk.com.br/2012/12/materias/33810716244.jpg" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Produto</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="https://geekysextoys.com/wp-content/uploads/2016/11/Super-cock-silicone-dildo-1-1-247x247.jpg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Produto</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
 
-			</div>
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTkGS8ryhWD8j1kps5JjOEjKANMAtMRPZX149VC1d1rxbFnDncmg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Produto</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
+		<div class="col-md-10 offset-md-1 products-grid">
+			<div class="row products-row-1">
+				<div class="col-md-4">
+					<div class="card" style="width: 18rem;">
+						<img class="card-img-top" src="https://img.ibxk.com.br/2012/12/materias/33810716244.jpg" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title titulo">Tekpix</h4>
+							<p class="card-text descricao">A camera mais vendida do Brasil!!.</p>
+							<h5 class="preco">R$49.90</h5>
+							<a target="_blank" href="https://produto.mercadolivre.com.br/MLB-993480942-cmera-e-filmadora-tekpix-i-dv12-_JM" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card" style="width: 18rem;">
+						<img class="card-img-top" src="https://geekysextoys.com/wp-content/uploads/2016/11/Super-cock-silicone-dildo-1-1-247x247.jpg"
+						    alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title titulo">Tekpix</h4>
+							<p class="card-text descricao">A camera mais vendida do Brasil!!.</p>
+							<h5 class="preco">R$49.90</h5>
+							<a target="_blank" href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-4">
+					<div class="card" style="width: 18rem;">
+						<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTkGS8ryhWD8j1kps5JjOEjKANMAtMRPZX149VC1d1rxbFnDncmg"
+						    alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title titulo">Tekpix</h4>
+							<p class="card-text descricao">A camera mais vendida do Brasil!!.</p>
+							<h5 class="preco">R$49.90</h5>
+							<a target="_blank" href="#" class="btn btn-primary">Comprar</a>
+						</div>
 					</div>
 				</div>
 			</div>
