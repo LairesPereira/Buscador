@@ -9,3 +9,6 @@ form {
     padding: 15px;
     border: solid 2px;
 }
+.obrigatorio{
+	color: red;
+}

@@ -28,8 +28,8 @@ var nome = /^[a-zA-Z ]{2,45}$/;
 //Contendo ela Letras maiúsculas e minúsculas apenas;
 var password = /^[a-zA-Z0-9.#$%&*_]{6,30}$/;
 //A expressão regular para senha valida senhas de 6 até 30 caracteres (sujeito a mudança);
-//Contendo ela letas, numeros e alguns caracteres especiais; 
-var rua = /^[a-zA-Z0-9 ]{4,60}$/;
+//Contendo ela letras, numeros e alguns caracteres especiais; 
+//var rua = /^[a-zA-Z0-9~^´`]{4,60}$/;
 //A expressão regular para rua valida strings de 4 até 60 caracteres (sujeito a mudança);
 //Contendo ela letras ou números;
 var bairro = /^[a-zA-Z0-9]{4,30}$/;
@@ -160,12 +160,12 @@ function validarCampos(){
 		validado = false;
 	}
 	//testa a validação da Rua;
-	if(!rua.test(document.getElementById("Rua").value)){
+	if((document.getElementById("Rua").value) == ''){
 		$("#Rua").css("border-color","red");
 		validado = false;
 	}
 	//testa a validação do Bairro;
-	if(!bairro.test(document.getElementById("Bairro").value)){
+	if((document.getElementById("Bairro").value) == ''){
 		$("#Bairro").css("border-color","red");
 		validado = false;
 	}

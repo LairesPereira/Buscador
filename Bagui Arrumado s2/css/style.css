@@ -19,6 +19,9 @@ header {
 .col-md-4{
 	margin-bottom: 20px;
 }
+.sair{
+	display: none;
+}
 
 .form-check-label,
 .form-check-input {

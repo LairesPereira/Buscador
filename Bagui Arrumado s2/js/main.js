@@ -2,6 +2,7 @@ $(document).ready(function () {
     //~Laires~ Verifica se o user está logado assim que a pagina carrega
     if (sessionStorage.getItem('logado') === 'true') {
         $('.anunciar').css('display', 'initial')
+        $('.sair').css('display', 'initial')
 
         //mostra o botao de anunciar
     }
@@ -55,5 +56,9 @@ function anunciarProd() {
         '</div>' +
         '</div>' +
         '</div>')
+}
+function sairlogin(){
+    sessionStorage.removeItem('logado')
+    location.reload();
 
 }
