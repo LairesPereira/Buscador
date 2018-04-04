@@ -1,3 +1,14 @@
+function salvaCadastro(){
+	var email = $('.email-cadastro').val()
+	var password = $('.senha-cadastro').val()
+	sessionStorage.setItem('email', email)
+	sessionStorage.setItem('senha', password)
+	console.log(email, password)
+}
+
+
+
+
 /*-----------Variaveis para servir como expressões regulares----------*/
 //estas expressões regulares irão funcionar como base para a validação dos campos do cadastro;
 //São objetos do tipo RegExp;

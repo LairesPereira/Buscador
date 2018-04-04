@@ -1,11 +1,23 @@
 $(document).ready(function () {
     //~Laires~ Verifica se o user está logado assim que a pagina carrega
-    if (window.localStorage.getItem('logado') === 'true') {
+    if (sessionStorage.getItem('logado') === 'true') {
         $('.anunciar').css('display', 'initial')
 
         //mostra o botao de anunciar
     }
 })
+
+function logar(){
+    if($('.login-password').val() == sessionStorage.getItem('senha') && 
+       $('.login-email').val() == sessionStorage.getItem('email')
+    ) {
+        sessionStorage.setItem('logado', 'true')
+        alert('Logado com sucesso')
+        $('.anunciar').css('display', 'initial')
+    } else {
+        alert('erro no login')
+    }
+}
 
 var produtosDaPagina = []
 
