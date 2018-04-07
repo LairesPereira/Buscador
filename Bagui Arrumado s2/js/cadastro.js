@@ -207,6 +207,15 @@ function validarCampos(){
 		pessoa.cep = document.getElementById("CEP").value;
 	}
 	pessoa.rg = document.getElementById("RG").value;
+	var a = document.getElementById("sexo");
+	var itemSelecionadoa = a.options[a.selectedIndex].value;
+	pessoa.sexo = itemSelecionadoa;
+	var b = document.getElementById("estado");
+	var itemSelecionadob = b.options[b.selectedIndex].value;
+	pessoa.estado = itemSelecionadob;
+	var c = document.getElementById("cidade");
+	var itemSelecionadoc = c.options[c.selectedIndex].value;
+	pessoa.cidade = itemSelecionadoc;
 	//Testa se todos os campos foram validados com sucesso;
 	if(validado){
 		cadastroform.push(pessoa);

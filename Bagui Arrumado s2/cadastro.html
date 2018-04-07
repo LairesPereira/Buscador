@@ -95,12 +95,12 @@
 					<input type="text" class="form-control" placeholder="99999-999" id="CEP" name="CEP" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" onkeyup="corrigirCep()" maxlength=9>
 				</div>
 				<label>Estado</label>
-				<select class="form-control">
+				<select class="form-control" id="estado">
 					<option>Paraiba</option>
 				</select>
 				<br>
 				<label>Cidade</label>
-				<select class="form-control">
+				<select class="form-control" id="cidade">
 					<option>Cajazeiras</option>
 					<option>Conceição</option>
 					<option>Campina Grande</option>
