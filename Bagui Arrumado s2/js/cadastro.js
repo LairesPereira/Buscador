@@ -120,7 +120,9 @@ function corrigirCep(){
 //Esta função irá testar e validar todos os campos do cadastro;
 //Ela irá utilizar das Expressões regulares para testar os campos digitados pelo usuário;
 //Se algum dos campos estiver fora do padrão, ele será destacado de vermelho para que o usuário possa concertar;
+var cadastroform = new Array();
 function validarCampos(){
+	var pessoa = {email: null, senha: null, confirmarsenha: null, nome: null, cpf: null, datadenascimento: null, telefone: null, sexo: null, rg: null, rua: null, bairro: null, cep: null, estado: null, cidade: null}
 	var validado = true; //esta variável dará a palavra final sobre a validação de todos os campos;
 	var userPassword = document.getElementById("password").value;
 	var confirmUserPassword = document.getElementById("confirm_password").value;
@@ -129,58 +131,88 @@ function validarCampos(){
 		$("#email").css("border-color","red");
 		validado = false;
 	}
+	else {
+		pessoa.email = document.getElementById("email").value;
+	}
 	//testa a validação da senha;
 	if(!password.test(userPassword)){
 		$("#password").css("border-color","red");
 		validado = false;
+	}
+	else {
+		pessoa.senha = document.getElementById("password").value;
 	}
 	//faz a comparação da senha e da confirmação de senha para ver se os dois valores batem;
 	if(userPassword!=confirmUserPassword){
 		$("#confirm_password").css("border-color","red");
 		validado = false;
 	}
+	else {
+		pessoa.confirmarsenha = document.getElementById("confirm_password").value;
+	}
 	//testa a validação do nome;
 	if(!nome.test(document.getElementById("Nome").value)){
 		$("#Nome").css("border-color","red");
 		validado = false;
+	}
+	else {
+		pessoa.nome = document.getElementById("Nome").value;
 	}
 	//testa a validação do CPF;
 	if(!cpf.test(document.getElementById("CPF").value)){
 		$("#CPF").css("border-color","red");
 		validado = false;
 	}
+	else {
+		pessoa.cpf = document.getElementById("CPF").value;
+	}
 	//testa a validação da Data de Nascimento;
 	if(!data.test( document.getElementById("data").value)){
 		$("#data").css("border-color","red");
 		validado = false;
+	}
+	else {
+		pessoa.datadenascimento = document.getElementById("data").value;
 	}
 	//testa a validação do Número de telefone;
 	if(!phone.test(document.getElementById("telefone").value)){
 		$("#telefone").css("border-color","red");
 		validado = false;
 	}
+	else {
+		pessoa.telefone = document.getElementById("telefone").value;
+	}
 	//testa a validação da Rua;
 	if((document.getElementById("Rua").value) == ''){
 		$("#Rua").css("border-color","red");
 		validado = false;
+	}
+	else {
+		pessoa.rua = document.getElementById("Rua").value;
 	}
 	//testa a validação do Bairro;
 	if((document.getElementById("Bairro").value) == ''){
 		$("#Bairro").css("border-color","red");
 		validado = false;
 	}
+	else {
+		pessoa.bairro = document.getElementById("Bairro").value;
+	}
 	//testa a validação do CEP;
 	if(!cep.test(document.getElementById("CEP").value)){
 		$("#CEP").css("border-color","red");
 		validado = false;
 	}
+	else {
+		pessoa.cep = document.getElementById("CEP").value;
+	}
+	pessoa.rg = document.getElementById("RG").value;
 	//Testa se todos os campos foram validados com sucesso;
 	if(validado){
+		cadastroform.push(pessoa);
 		alert("usuário cadastrado com sucesso!");
 	}
 }
-
-
 //Falta ainda a validação do RG e a implementação desta função no botão do formulário;
 //Esta função está sendo ativada por meio de gambiarra no botão localizado no canto inferior esquedo da pagina, para que se possa testar tudo;
 //Um grande abraço e um beijo pra vcs, meus lindos <3;
