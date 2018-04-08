@@ -3,8 +3,7 @@ $(document).ready(function () {
     if (sessionStorage.getItem('logado') === 'true') {
         $('.anunciar').css('display', 'initial')
         $('.sair').css('display', 'initial')
-
-        //mostra o botao de anunciar
+               //mostra o botao de anunciar
     }
 })
 
@@ -15,6 +14,7 @@ function logar(){
         sessionStorage.setItem('logado', 'true')
         alert('Logado com sucesso')
         $('.anunciar').css('display', 'initial')
+        $('#cadastro2').css('display', 'none') 
     } else {
         alert('erro no login')
     }
