@@ -1,9 +1,10 @@
 function salvaCadastro(){
-	var email = $('.email-cadastro').val()
-	var password = $('.senha-cadastro').val()
-	sessionStorage.setItem('email', email)
-	sessionStorage.setItem('senha', password)
-	console.log(email, password)
+	var email = $('.email-cadastro').val();
+	var password = $('.senha-cadastro').val();
+	sessionStorage.setItem('email', email);
+	sessionStorage.setItem('senha', password);
+	console.log(email, password);
+	window.location = "index.html";
 }
 
 

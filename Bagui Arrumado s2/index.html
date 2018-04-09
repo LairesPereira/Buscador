@@ -9,19 +9,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<title>Buscapé - Compare Preços e Economize</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	    crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	    crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	    crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	    crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="cadastro.html">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/perfilproduto.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -67,7 +62,7 @@
 
 
 								<!-- Button trigger modal -->
-								<button type="button" class="btn navitembg" data-toggle="modal" data-target="#exampleModal">
+								<button type="button" class="btn navitembg" data-toggle="modal" data-target="#exampleModal" id="login">
 									Login
 								</button>
 								<button type="button" class="anunciar btn navitembg" data-toggle="modal" data-target="#modal-anuncio">
@@ -105,78 +100,13 @@
 				</div>
 			</div>
 	</header>
-	<!-- PARTE COM OS PRODUTOS -->
+
+	<!-- parte com os produtos -->
+
 	<div class="container-products">
 		<div class="row row-products">
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;" id="product">
-					<img class="card-img-top" src="https://http2.mlstatic.com/cmera-sony-dsc-h300-20mp35xhd-preto-vitrine-D_NQ_NP_671760-MLB26260180231_102017-F.jpg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Câmera Sony Dsc H300</h5>
-						<p class="card-text">Preço : R$1.300,00</p>
-						<a href="paginaproduto.html" class="btn btn-primary">Comprar Agora</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;" id="product">
-					<img class="card-img-top" src="https://www.extra-imagens.com.br/dvdsebluray/FilmeseSeriados/AcaoAventura/2527650/29740588/DVD-O-Senhor-Dos-Aneis-A-Trilogia-Versao-Estendida-The-Lord-of-the-Rings-12-Discos-2527650.jpg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Box de Filmes : Senhor dos Anéis</h5>
-						<p class="card-text">Preço : R$ 40,50</p>
-						<a href="paginaproduto2.html" class="btn btn-primary">Comprar Agora</a>
-					</div>
-				</div>
-
-			</div>
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;" id="product">
-					<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTkGS8ryhWD8j1kps5JjOEjKANMAtMRPZX149VC1d1rxbFnDncmg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Máscara de Látex - Cabeça de Cavalo</h5>
-						<p class="card-text">Preço : R$ 21,20 </p>
-						<a href="paginaproduto3.html" class="btn btn-primary">Comprar Agora</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;" id="product">
-					<img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0885/7932/products/LUMCD_2048x2048.png?v=1495569233" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">The Lumineers - Cleopatra (CD)</h5>
-						<p class="card-text">Preço : R$ 27,90 </p>
-						<a href="paginaproduto3.html" class="btn btn-primary">Comprar Agora</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;" id="product">
-					<img class="card-img-top" src="https://a-static.mlcdn.com.br/1500x1500/smartphone-motorola-moto-g5s-xt1792-platinum/compreiemeu/0010060122/a525e1b6631ddd8fd2741d0f751f914a.jpg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Smartphone Motorola Moto G5S XT1792 Platinum</h5>
-						<p class="card-text">Preço : R$ 747,50 </p>
-						<a href="paginaproduto3.html" class="btn btn-primary">Comprar Agora</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card" style="width: 18rem;" id="product">
-					<img class="card-img-top" src="https://avon.vteximg.com.br/arquivos/ids/169582-1000-1000/maleta-para-maquiagem-avon-130-anos-avn3291-1.jpg?v=636398792124530000"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Maleta de Maquiagem Avon 130</h5>
-						<p class="card-text">Preço : R$ 189,90 </p>
-						<a href="paginaproduto3.html" class="btn btn-primary">Comprar Agora</a>
-					</div>
-				</div>
-			</div>
+		
 		</div>
-	</div>
-
 	</div>
 
 
@@ -187,7 +117,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Anunciar produto</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -198,10 +128,7 @@
 							<div class="container">
 								<div class="col-md-6">
 									<div class="form-group">
-
-										<img id='img-upload' style="width: 200px; height: 200px;" />
-										<br>
-										<br>
+										<img id='img-upload' style="width: 100px; height: 100px;" />
 										<div class="input-group">
 											<span class="input-group-btn">
 												<span class="btn btn-default btn-file">
@@ -249,7 +176,7 @@
 		</div>
 	</div>
 
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -287,7 +214,7 @@
 				Marte, 489, CEP 06541-005, inscrita no CNPJ/MF sob o nº 09.419.682/0001-46</center>
 		</div>
 	</div>
-
+	<script type="text/javascript" src="js/main.js"></script>
 
 
 </body>
