@@ -12,3 +12,8 @@ form {
 .obrigatorio{
 	color: red;
 }
+
+#map {
+    height: 100px;
+    display: inline !important;
+  }

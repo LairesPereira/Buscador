@@ -223,6 +223,3 @@ function validarCampos(){
 		alert("usuário cadastrado com sucesso!");
 	}
 }
-//Falta ainda a validação do RG e a implementação desta função no botão do formulário;
-//Esta função está sendo ativada por meio de gambiarra no botão localizado no canto inferior esquedo da pagina, para que se possa testar tudo;
-//Um grande abraço e um beijo pra vcs, meus lindos <3;
