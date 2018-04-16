@@ -1,13 +1,15 @@
 body {
+
 	background-color: #EEEEEE;
 	background-image: url('http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-039.jpg');
+	background-color: #ced6e0;
 	font-family: 'Montserrat', sans-serif;
 }
 
 header {
 	padding-top: 25px;
 	padding-bottom: 15px;
-	background-color: #FFCD00;
+	background-color: #FFC312;
 }
 .col-md-4{
 	margin-bottom: 20px;
@@ -20,8 +22,12 @@ header {
 
 .navitembg {
 	color: blue;
+
 	background-color: #FFCD00;
 	
+
+	background-color: #FFC312;
+
 }
 
 .container-products {
